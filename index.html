@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>@momalekiii</title>
+
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>𓅓</text></svg>">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
 <style>
   body, html {
     height: 100%;
@@ -11,40 +16,116 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f7f7f7;
-    font-family: 'Courier New', monospace; /* Terminal-like font */
-  }
-  .typing-container {
-    text-align: center;
-    white-space: nowrap;
+    background-color: #ffffff;
+    background-image: radial-gradient(#e5e5e5 1px, transparent 1px);
+    background-size: 20px 20px;
+    font-family: 'Courier New', monospace;
     overflow: hidden;
-    border-right: 3px solid;
-    animation: typing 2s steps(30, end), blink-caret .75s step-end infinite;
-    color: black; /* Default text color */
   }
-  @keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
+
+  .main-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    text-align: center;
   }
-  @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: black }
+
+  /* Style baraye Joghd-e Hieroglyph */
+  .owl-symbol {
+    font-size: 60px; /* Bozorg va ba heybat */
+    color: #000;
+    margin-bottom: 5px;
+    user-select: none;
+  }
+
+  .typing-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    font-size: clamp(0.9rem, 3.5vw, 1.2rem);
+    min-height: 1.5em;
+    font-weight: bold;
+  }
+
+  .cursor {
+    display: inline-block;
+    width: 10px;
+    height: 1.2em;
+    background-color: black;
+    margin-left: 5px;
+    animation: blink 0.8s infinite;
+  }
+
+  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+
+  .social-links {
+    display: flex;
+    gap: 30px;
+    opacity: 0;
+    transform: translateY(15px);
+    transition: all 1s cubic-bezier(0.2, 0.8, 0.2, 1);
+    visibility: hidden;
+    margin-top: 15px;
+  }
+
+  .social-links.visible {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+  }
+
+  .social-btn {
+    color: black;
+    font-size: 26px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+  }
+
+  .social-btn:hover {
+    transform: translateY(-5px);
+    opacity: 0.4;
   }
 </style>
 </head>
 <body>
-<div class="typing-container" id="typing-text"></div>
+
+<div class="main-wrapper">
+  <div class="owl-symbol">𓅓</div>
+
+  <div class="typing-container">
+    <span id="typing-text"></span><span id="cursor" style="display:none;" class="cursor"></span>
+  </div>
+
+  <div class="social-links" id="social-links">
+    <a href="https://x.com/momalekiii" class="social-btn" target="_blank"><i class="fa-brands fa-x-twitter"></i></a>
+    <a href="https://github.com/momalekiii" class="social-btn" target="_blank"><i class="fa-brands fa-github"></i></a>
+    <a href="https://instagram.com/momalekiii" class="social-btn" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+  </div>
+</div>
+
 <script>
   const text = "Mohammad Reza Maleki AKA momalekiii... !";
   const typingText = document.getElementById('typing-text');
+  const cursor = document.getElementById('cursor');
+  const socialLinks = document.getElementById('social-links');
   let index = 0;
+
   function type() {
     if (index < text.length) {
       typingText.textContent += text.charAt(index);
       index++;
-      setTimeout(type, 100);
+      setTimeout(type, 70);
+    } else {
+      cursor.style.display = 'inline-block';
+      setTimeout(() => {
+        socialLinks.classList.add('visible');
+      }, 500);
     }
   }
+
   window.onload = type;
 </script>
 </body>
