@@ -8,180 +8,203 @@
 
 <title>Maleki</title>
 
-<!-- Favicon -->
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2280%22>𓅓</text></svg>">
 
-<!-- Font Awesome -->
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<!-- JetBrains Mono -->
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
 
 
 <style>
 
+
 * {
-    box-sizing: border-box;
+    box-sizing:border-box;
 }
+
 
 
 html,
 body {
-    height: 100%;
-    margin: 0;
+
+    height:100%;
+    margin:0;
+
 }
+
 
 
 body {
 
-    display: flex;
+    display:flex;
 
-    justify-content: center;
+    justify-content:center;
 
-    align-items: center;
+    align-items:center;
 
-    overflow: hidden;
+    overflow:hidden;
 
-    background: #ffffff;
+    background:#ffffff;
 
-    color: #111111;
+    color:#111;
 
-    font-family: "JetBrains Mono", monospace;
+    font-family:"JetBrains Mono", monospace;
 
 }
 
 
-/* Main */
 
 .main-wrapper {
 
-    text-align: center;
+    width:100%;
 
-    padding: 20px;
+    max-width:600px;
+
+    text-align:center;
+
+    padding:20px;
 
 }
 
 
-/* Owl */
+
+
+/* Logo */
 
 .owl-symbol {
 
-    font-size: 70px;
+    font-size:58px;
 
-    margin-bottom: 15px;
+    margin-bottom:8px;
 
-    color: #111111;
+    color:#111;
 
-    user-select: none;
+    user-select:none;
 
 }
 
 
-/* Typing */
+
+
+/* Name */
 
 .typing-container {
 
-    min-height: 35px;
+    min-height:35px;
 
-    font-size: clamp(1rem, 4vw, 1.3rem);
+    font-size:clamp(1rem,4vw,1.3rem);
 
-    font-weight: 700;
+    font-weight:600;
 
 }
+
 
 
 .cursor {
 
-    display: inline-block;
+    display:inline-block;
 
-    width: 10px;
+    width:9px;
 
-    height: 1.2em;
+    height:1.15em;
 
-    background: #111111;
+    background:#111;
 
-    margin-left: 5px;
+    margin-left:5px;
 
-    animation: blink 0.8s infinite;
+    animation:blink .8s infinite;
 
 }
+
 
 
 @keyframes blink {
 
     50% {
-        opacity: 0;
+        opacity:0;
     }
 
 }
+
+
 
 
 /* Roles */
 
 .subtitle {
 
-    margin-top: 18px;
+    margin-top:22px;
 
-    opacity: 0;
+    opacity:0;
 
-    font-size: 14px;
+    font-size:14px;
 
-    transition: opacity 1s ease;
+    transition:opacity 1s ease;
 
 }
+
 
 
 .subtitle.visible {
 
-    opacity: 1;
+    opacity:1;
 
 }
+
 
 
 .subtitle a {
 
-    color: #111111;
+    color:#111;
 
-    text-decoration: none;
+    text-decoration:none;
 
-    transition: opacity 0.3s ease;
+    transition:opacity .3s ease;
 
 }
+
 
 
 .subtitle a:hover {
 
-    opacity: 0.45;
+    opacity:.45;
 
 }
+
 
 
 .separator {
 
-    margin: 0 10px;
+    margin:0 10px;
 
-    color: #999999;
+    color:#b5b5b5;
 
 }
 
 
-/* Social links */
+
+
+/* Social */
 
 .social-links {
 
-    margin-top: 30px;
+    margin-top:28px;
 
-    display: flex;
+    display:flex;
 
-    justify-content: center;
+    justify-content:center;
 
-    gap: 30px;
+    gap:28px;
 
-    opacity: 0;
+    opacity:0;
 
-    transform: translateY(15px);
+    transform:translateY(12px);
 
     transition:
         opacity 1s ease,
@@ -190,207 +213,220 @@ body {
 }
 
 
+
 .social-links.visible {
 
-    opacity: 1;
+    opacity:1;
 
-    transform: translateY(0);
+    transform:translateY(0);
 
 }
+
 
 
 .social-btn {
 
-    color: #111111;
+    color:#111;
 
-    font-size: 26px;
+    font-size:24px;
 
     transition:
-        transform 0.3s ease,
-        opacity 0.3s ease;
+        transform .3s ease,
+        opacity .3s ease;
 
 }
+
 
 
 .social-btn:hover {
 
-    transform: translateY(-5px);
+    transform:translateY(-4px);
 
-    opacity: 0.45;
+    opacity:.45;
 
 }
 
 
-/* Mobile */
 
-@media (max-width: 480px) {
+
+
+@media(max-width:480px){
+
 
     .owl-symbol {
 
-        font-size: 60px;
+        font-size:52px;
 
     }
 
-    .typing-container {
-
-        font-size: 1rem;
-
-    }
 
     .subtitle {
 
-        font-size: 12px;
+        font-size:12px;
 
     }
+
 
     .separator {
 
-        margin: 0 6px;
+        margin:0 6px;
 
     }
 
-    .social-links {
-
-        gap: 25px;
-
-    }
-
-    .social-btn {
-
-        font-size: 24px;
-
-    }
 
 }
 
+
+
 </style>
 
+
 </head>
+
 
 
 <body>
 
 
+
 <div class="main-wrapper">
 
 
-    <!-- Owl -->
-
-    <div class="owl-symbol">
-        𓅓
-    </div>
+<div class="owl-symbol">
+𓅓
+</div>
 
 
-    <!-- Name -->
 
-    <div class="typing-container">
-
-        <span id="typing-text"></span>
-
-        <span
-            id="cursor"
-            class="cursor"
-            style="display: none;">
-        </span>
-
-    </div>
+<div class="typing-container">
 
 
-    <!-- Roles -->
+<span id="typing-text"></span>
 
-    <div
-        class="subtitle"
-        id="subtitle">
-
-
-        <a
-            href="https://github.com/momalekiii"
-            target="_blank"
-            rel="noopener noreferrer">
-
-            Developer
-
-        </a>
-
-
-        <span class="separator">
-            ·
-        </span>
-
-
-        <a
-            href="https://instagram.com/momalekiii"
-            target="_blank"
-            rel="noopener noreferrer">
-
-            Creator
-
-        </a>
-
-
-        <span class="separator">
-            ·
-        </span>
-
-
-        <a
-            href="mailto:m.mlk9928@yahoo.com">
-
-            Problem Solver
-
-        </a>
-
-
-    </div>
-
-
-    <!-- Social -->
-
-    <div
-        class="social-links"
-        id="social-links">
-
-
-        <a
-            class="social-btn"
-            href="https://x.com/momalekiii"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="X">
-
-            <i class="fa-brands fa-x-twitter"></i>
-
-        </a>
-
-
-        <a
-            class="social-btn"
-            href="https://github.com/momalekiii"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="GitHub">
-
-            <i class="fa-brands fa-github"></i>
-
-        </a>
-
-
-        <a
-            class="social-btn"
-            href="https://instagram.com/momalekiii"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Instagram">
-
-            <i class="fa-brands fa-instagram"></i>
-
-        </a>
-
-
-    </div>
+<span 
+id="cursor" 
+class="cursor"
+style="display:none">
+</span>
 
 
 </div>
+
+
+
+
+
+<div 
+class="subtitle"
+id="subtitle">
+
+
+<a 
+href="https://github.com/momalekiii"
+target="_blank"
+rel="noopener noreferrer">
+
+Developer
+
+</a>
+
+
+
+<span class="separator">
+·
+</span>
+
+
+
+<a
+href="https://instagram.com/momalekiii"
+target="_blank"
+rel="noopener noreferrer">
+
+Creator
+
+</a>
+
+
+
+<span class="separator">
+·
+</span>
+
+
+
+
+<a
+href="mailto:m.mlk9928@yahoo.com">
+
+Problem Solver
+
+</a>
+
+
+
+</div>
+
+
+
+
+
+
+<div 
+class="social-links"
+id="social-links">
+
+
+
+<a
+class="social-btn"
+href="https://x.com/momalekiii"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="X">
+
+<i class="fa-brands fa-x-twitter"></i>
+
+</a>
+
+
+
+
+<a
+class="social-btn"
+href="https://github.com/momalekiii"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="GitHub">
+
+<i class="fa-brands fa-github"></i>
+
+</a>
+
+
+
+
+<a
+class="social-btn"
+href="https://instagram.com/momalekiii"
+target="_blank"
+rel="noopener noreferrer"
+aria-label="Instagram">
+
+<i class="fa-brands fa-instagram"></i>
+
+</a>
+
+
+
+</div>
+
+
+
+</div>
+
+
+
 
 
 
@@ -401,61 +437,71 @@ const text = "Mohammad Reza Maleki";
 
 
 const typingText =
-    document.getElementById("typing-text");
+document.getElementById("typing-text");
 
 
 const cursor =
-    document.getElementById("cursor");
+document.getElementById("cursor");
 
 
 const subtitle =
-    document.getElementById("subtitle");
+document.getElementById("subtitle");
 
 
 const social =
-    document.getElementById("social-links");
+document.getElementById("social-links");
+
 
 
 let index = 0;
 
 
-function type() {
 
-    if (index < text.length) {
+function type(){
 
-        typingText.textContent +=
-            text.charAt(index);
+
+    if(index < text.length){
+
+
+        typingText.textContent += text.charAt(index);
 
         index++;
 
-        setTimeout(type, 70);
+
+        setTimeout(type,70);
+
 
     } else {
 
-        cursor.style.display =
-            "inline-block";
+
+        cursor.style.display="inline-block";
 
 
-        setTimeout(() => {
+        setTimeout(()=>{
+
 
             subtitle.classList.add("visible");
 
+
             social.classList.add("visible");
 
-        }, 500);
+
+        },500);
+
 
     }
+
 
 }
 
 
-window.addEventListener(
-    "load",
-    type
-);
+
+window.addEventListener("load", type);
+
 
 
 </script>
+
 
 
 </body>
